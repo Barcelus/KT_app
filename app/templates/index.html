@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Rzut kostkami d6</title>
+</head>
+<body>
+    <h1>Rzut kostkami d6</h1>
+    <form method="POST">
+        Liczba kostek: <input type="number" name="num_dice" required><br>
+        Sukces >= (np. 3): <input type="number" name="success_threshold" required><br>
+        <button type="submit">Rzuć</button>
+    </form>
+
+    {% if result %}
+        {% if result.error %}
+            <p style="color:red">{{ result.error }}</p>
+        {% else %}
+            <p>Wyniki rzutów: {{ result.rolls }}</p>
+            <p>Liczba sukcesów (>= {{ result.success_threshold }}): {{ result.successes }}</p>
+            <p>Liczba krytycznych sukcesów (6): {{ result.critical_successes }}</p>
+            {% endif %}
+    {% endif %}
+</body>
+</html>
