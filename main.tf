@@ -1,5 +1,6 @@
 provider "aws" {
   region = "eu-north-1"
+  profile = "default"
 }
 
 resource "aws_security_group" "kt_app_sg" {
