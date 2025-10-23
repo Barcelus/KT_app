@@ -16,7 +16,7 @@ resource "aws_security_group" "kt_app_sg" {
     from_port   = 5000
     to_port     = 5000
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # Port Flask (lub Gunicorn)
+    cidr_blocks = ["0.0.0.0/0"] # Port Flask (or Gunicorn)
   }
 
   egress {

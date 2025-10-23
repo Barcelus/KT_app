@@ -1,0 +1,26 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Git
+.git
+.gitignore
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs, environment files
+*.log
+*.env
+
+# Cache / temp
+*.swp
+*.tmp
